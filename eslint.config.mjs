@@ -17,6 +17,9 @@ const eslintConfig = [
     },
 
     settings: {
+      react: {
+        version: 'detect',
+      },
       'import/parsers': {
         espree: ['.js', '.cjs', '.mjs', '.jsx', '.mjs'],
         '@typescript-eslint/parser': ['.ts', '.tsx', '.mjs'],
@@ -33,7 +36,7 @@ const eslintConfig = [
   {
     languageOptions: {
       parserOptions: {
-        projectService: true,
+        // projectService: true,
         tsconfigRootDir: import.meta.dirname,
 
         // tsconfigRootDir: '.',
@@ -59,6 +62,7 @@ const eslintConfig = [
 
     rules: {
       'react/react-in-jsx-scope':'off',
+      '@typescript-eslint/no-empty-object-type': 'off',
       '@typescript-eslint/consistent-type-definitions': ['warn', 'interface'],
       '@typescript-eslint/consistent-type-assertions': ['error', { assertionStyle: 'never' }],
       '@typescript-eslint/consistent-type-imports': ['warn',{ prefer: 'type-imports', fixStyle: 'separate-type-imports', }],
