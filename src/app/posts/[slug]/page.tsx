@@ -32,7 +32,7 @@ export const generateMetadata = async ({ params }: AsyncParams): Promise<Metadat
   }
 };
 
-export const BlogPost = async ({ params }: AsyncParams) => {
+const BlogPost = async ({ params }: AsyncParams) => {
   const { slug } = await params;
   const post = await getPost(slug);
   if (!post.content) {

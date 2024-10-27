@@ -1,5 +1,5 @@
 interface VideoProps {
-  node: { children: { value: string }[] };
+  node?: unknown;
   src?: string;
   controls?: boolean;
 }
